@@ -10,7 +10,7 @@ before_script:
 - pip install pycodestyle
 - pip install nose2
 - pip install coverage
-- pip install commonconf
+- pip install 'commonconf<1.0'
 - pip install python-coveralls
 script:
 - pycodestyle uw_r25/ --exclude=uw_r25/tests
