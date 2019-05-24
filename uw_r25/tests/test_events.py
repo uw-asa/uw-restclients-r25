@@ -21,6 +21,8 @@ class R25TestEvents(TestCase):
         self.assertEquals(event.parent_id, None, "parent_id")
         self.assertEquals(event.cabinet_id, event.event_id, "cabinet_id")
         self.assertEquals(event.cabinet_name, event.name, "cabinet_name")
+        self.assertEquals(event.event_type_id, "48", "event_type_id")
+        self.assertEquals(event.event_type_name, "Branch/Quarter Cabinet", "event_type_name")
         self.assertEquals(event.state_name(), "Tentative", "state_name")
         self.assertEquals(len(event.reservations), 1, "reservations")
         self.assertEquals(len(event.binding_reservations), 1, "binding_reservations")

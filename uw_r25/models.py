@@ -28,6 +28,8 @@ class Event(models.Model):
     parent_id = models.IntegerField(null=True)
     cabinet_id = models.IntegerField(null=True)
     cabinet_name = models.CharField(max_length=100, null=True)
+    event_type_id = models.IntegerField(null=True)
+    event_type_name = models.CharField(max_length=100, null=True)
 
     def state_name(self):
         return dict(self.STATE_CHOICES)[self.state]

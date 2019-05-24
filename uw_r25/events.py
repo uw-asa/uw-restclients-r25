@@ -48,6 +48,10 @@ def events_from_xml(tree):
                                       namespaces=nsmap)[0].text
         event.cabinet_name = node.xpath("r25:cabinet_name",
                                         namespaces=nsmap)[0].text
+        event.event_type_id = node.xpath("r25:event_type_id",
+                                         namespaces=nsmap)[0].text
+        event.event_type_name = node.xpath("r25:event_type_name",
+                                           namespaces=nsmap)[0].text
 
         event.binding_reservations = []
         event.reservations = []
